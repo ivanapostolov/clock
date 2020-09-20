@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 10vh;
+}
+
+.heading>div {
+    font-size: 25px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #EEEEEE;
+}
+
+.clock-canvas {
+    width: 480px;
+    height: 480px;
+    border: 1px solid #000000;
+    background-color: #EEEEEE;
+}
