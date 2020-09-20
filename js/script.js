@@ -1,11 +1,21 @@
-const drawClockFace = () => {
+function drawClockFace() {
     const ctx = document.getElementById("clock_canvas").getContext("2d");
     const timer = document.getElementById("timer");
 
-    const radius = 220;
+    let radius = 220;
     const border = 5;
 
+    document.getElementById("btn_apply").addEventListener('click', () => {
+        let newRadius = parseInt(document.getElementById('radius').value);
+
+        if (newRadius > 0 && newRadius < 240) {
+            radius = newRadius
+        }
+    });
+
     setInterval(() => {
+        document.getElementById("tick_sound").play();
+
         ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight);
 
         for (let i = 0; i < border; i++) {
@@ -41,6 +51,10 @@ const drawClockDial = (ctx, x, y, r) => {
 
 const drawClockHands = (ctx, x, y, r) => {
     const now = new Date();
+
+    if (now.getMinutes() === 0) {
+        document.getElementById("cuckoo_sound").play();
+    }
 
     const hourOffset = 0.5 * r;
     const minuteOffset = 0.4 * r;
