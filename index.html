@@ -6,7 +6,7 @@
 
     <title>Clock</title>
 
-    <script src="./js/bezier.js"></script>
+    <script src="./js/drawAPI.js"></script>
     <script src="./js/script.js"></script>
 
     <link rel="stylesheet" href="./css/style.css">
@@ -15,16 +15,32 @@
 <body>
     <audio id="tick_sound" src="./assets/tick.mp3"></audio>
     <audio id="cuckoo_sound" src="./assets/cuckoo.mp3"></audio>
-    <div class="heading">
-        <div style="font-weight: bold">Current Time: &#20; </div>
-        <div id="timer"></div>
-    </div>
-    <div class="radius-input">
-        <input id="radius" class="input" type="number" min="0">
-        <button id="btn_apply" class="btn-filter">Apply</button>
-    </div>
-    <div class="flex-container">
-        <canvas width="480" height="480" id="clock_canvas" class="clock-canvas"></canvas>
+
+    <div class="root">
+        <!--Timer Section Below-->
+        <div class="headline-section">
+            <div class="headline-label">
+                Current Time: &#20;
+            </div>
+            <div id="timer" class="headline-content"></div>
+        </div>
+        <!--Input Radius Section Below-->
+        <div class="headline-section">
+            <div class="headline-label">
+                Current Radius (px): &#20;
+            </div>
+            <div class="headline-content">
+                <div class="radius-input">
+                    <button id="btn_decrease" class="in_de-crement-button">-</button>
+                    <div id="value_box" class="value-box">220</div>
+                    <button id="btn_increase" class="in_de-crement-button">+</button>
+                </div>
+            </div>
+        </div>
+        <!--Canvas Section Below-->
+        <div class="clock-section">
+            <canvas width="480" height="480" id="clock_canvas" class="clock-canvas"></canvas>
+        </div>
     </div>
 </body>
 

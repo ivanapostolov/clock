@@ -36,12 +36,6 @@ const drawCircle = (ctx, x, y, r) => {
     }
 }
 
-const getLineEquation = (x1, y1, x2, y2) => {
-    let a = (y2 - y1) / (x2 - x1);
-
-    return { a: a, b: y1 - (a * x1) }
-}
-
 const drawLine = (ctx, x1, y1, x2, y2) => {
     const maxCoordinateDistance = Math.max(Math.abs(x1 - x2), Math.abs(y1 - y2));
 

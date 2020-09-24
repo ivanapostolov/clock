@@ -1,47 +1,79 @@
-* {
+html,
+body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
-.heading {
+.root {
+    height: 100%;
     display: flex;
-    align-items: center;
-    background-color: white;
-    height: 10vh;
+    flex-direction: column;
+    background-color: #EEEEEE;
 }
 
-.heading>div {
-    font-size: 25px;
+.headline-section {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0px;
+    font-size: 16px;
+    color: black;
+}
+
+.headline-label {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-weight: bold;
+}
+
+.headline-content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
 }
 
 .radius-input {
     display: flex;
-    align-items: center;
-    background-color: white;
-    height: 10vh;
+    flex-direction: row;
+    height: 100%;
+    align-items: stretch;
+    margin: 0px 10px;
 }
 
-input {
-    width: 20%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    font-size: 16px;
-    background-color: white;
-    padding: 20px, 0px;
-    margin: 10px;
+.in_de-crement-button {
+    text-align: center;
+    border: 1px solid #9E9E9E;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #E0E0E0;
 }
 
-.flex-container {
+.value-box {
+    padding: 0px 20px;
+    border-top: 1px solid #9E9E9E;
+    border-bottom: 1px solid #9E9E9E;
+    color: black;
+    background-color: #EEEEEE;
+}
+
+.clock-section {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    background-color: #EEEEEE;
+    background-color: #E0E0E0;
 }
 
 .clock-canvas {
     width: 480px;
     height: 480px;
-    border: 1px solid #000000;
-    background-color: #EEEEEE;
+    border: 1px solid black;
+    background-color: #E0E0E0;
 }
